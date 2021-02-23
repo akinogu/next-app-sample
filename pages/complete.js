@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export default function Home() {
+export default function Complete() {
   const classes = useStyles()
   return (
     <Container maxWidth='sm'>

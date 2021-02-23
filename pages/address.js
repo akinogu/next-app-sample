@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export default function Home() {
+export default function Address() {
   const classes = useStyles()
   return (
     <Container maxWidth='sm' className={classes.container}>
