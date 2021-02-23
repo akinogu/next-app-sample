@@ -26,7 +26,7 @@ export default function Address() {
       <TextField id='prefecture' label='prefecure' variant='outlined' value={prefecture} onChange={e => setPrefecture(e.target.value)} />
       <TextField id='area' label='area' variant='outlined' value={area} onChange={e => setArea(e.target.value)} />
       <div className={classes.buttonContainer}>
-        <Button variant='contained' color='primary' href='/complete' disabled={!area && !prefecture}>登録</Button>
+        <Button variant='contained' color='primary' href='/complete' data-test='nextButton' disabled={!area && !prefecture}>登録</Button>
       </div>
     </Container>
   )

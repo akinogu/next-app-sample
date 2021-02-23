@@ -24,7 +24,7 @@ export default function Age() {
     <Container maxWidth='sm' className={classes.container}>
       <TextField id='age' label='age' value={age} onChange={e => setAge(e.target.value)} variant='outlined' />
       <div className={classes.buttonContainer}>
-        <Button variant='contained' color='primary' href='/address' disabled={!age}>次へ</Button>
+        <Button variant='contained' color='primary' href='/address' data-test='nextButton' disabled={!age}>次へ</Button>
       </div>
     </Container>
   )

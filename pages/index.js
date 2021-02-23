@@ -42,6 +42,7 @@ export default function Home() {
           variant='contained'
           color='primary'
           href='/age'
+          data-test='nextButton'
           disabled={!lastName && !firstName}
         >
           次へ
