@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Container from '@material-ui/core/Container'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -17,12 +18,13 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Age() {
+  const [age, setAge] = useState('')
   const classes = useStyles()
   return (
     <Container maxWidth='sm' className={classes.container}>
-      <TextField id='age' label='age' variant='outlined' />
+      <TextField id='age' label='age' value={age} onChange={e => setAge(e.target.value)} variant='outlined' />
       <div className={classes.buttonContainer}>
-        <Button variant='contained' color='primary' href='/address'>次へ</Button>
+        <Button variant='contained' color='primary' href='/address' disabled={!age}>次へ</Button>
       </div>
     </Container>
   )

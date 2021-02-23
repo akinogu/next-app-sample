@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Container from '@material-ui/core/Container'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -17,13 +18,15 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Address() {
+  const [prefecture, setPrefecture] = useState('')
+  const [area, setArea] = useState('')
   const classes = useStyles()
   return (
     <Container maxWidth='sm' className={classes.container}>
-      <TextField id='prefecture' label='prefecure' variant='outlined' />
-      <TextField id='area' label='area' variant='outlined' />
+      <TextField id='prefecture' label='prefecure' variant='outlined' value={prefecture} onChange={e => setPrefecture(e.target.value)} />
+      <TextField id='area' label='area' variant='outlined' value={area} onChange={e => setArea(e.target.value)} />
       <div className={classes.buttonContainer}>
-        <Button variant='contained' color='primary' href='/complete'>登録</Button>
+        <Button variant='contained' color='primary' href='/complete' disabled={!area && !prefecture}>登録</Button>
       </div>
     </Container>
   )

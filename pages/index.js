@@ -38,7 +38,14 @@ export default function Home() {
         onChange={e => setFirstName(e.target.value)}c
       />
       <div className={classes.buttonContainer}>
-        <Button variant='contained' color='primary' href='/age'>次へ</Button>
+        <Button
+          variant='contained'
+          color='primary'
+          href='/age'
+          disabled={!lastName && !firstName}
+        >
+          次へ
+        </Button>
       </div>
     </Container>
   )
