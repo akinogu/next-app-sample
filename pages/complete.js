@@ -11,7 +11,7 @@ export default function Complete() {
   const classes = useStyles()
   return (
     <Container maxWidth='sm'>
-      <p className={classes.text}>登録完了</p>
+      <p data-test='message' className={classes.text}>登録完了</p>
     </Container>
   )
 }
