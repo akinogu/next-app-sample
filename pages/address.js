@@ -20,10 +20,10 @@ export default function Home() {
   const classes = useStyles()
   return (
     <Container maxWidth='sm' className={classes.container}>
-      <TextField id='lastName' label='last name' variant='outlined' />
-      <TextField id='firstName' label='first name' variant='outlined' />
+      <TextField id='prefecture' label='prefecure' variant='outlined' />
+      <TextField id='area' label='area' variant='outlined' />
       <div className={classes.buttonContainer}>
-        <Button variant='contained' color='primary' href='/age'>次へ</Button>
+        <Button variant='contained' color='primary' href='/complete'>登録</Button>
       </div>
     </Container>
   )

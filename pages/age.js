@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
-      width: '25ch',
+      width: '100%',
     },
   },
   buttonContainer: {
@@ -20,10 +20,9 @@ export default function Home() {
   const classes = useStyles()
   return (
     <Container maxWidth='sm' className={classes.container}>
-      <TextField id='lastName' label='last name' variant='outlined' />
-      <TextField id='firstName' label='first name' variant='outlined' />
+      <TextField id='age' label='age' variant='outlined' />
       <div className={classes.buttonContainer}>
-        <Button variant='contained' color='primary' href='/age'>次へ</Button>
+        <Button variant='contained' color='primary' href='/address'>次へ</Button>
       </div>
     </Container>
   )
